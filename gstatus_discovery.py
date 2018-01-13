@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 gluster_volume_names = []
-gstatus_output = subprocess.check_output('python /root/gstatus/gstatus.py -a -o json ', shell=True).decode()
+gstatus_output = subprocess.check_output('gstatus -a -o json ', shell=True).decode()
 date, time, json_part = gstatus_output.split(maxsplit=2)
 gluster_info = json.loads(json_part)
 volume_list = gluster_info["volume_summary"]
