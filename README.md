@@ -10,7 +10,9 @@ You have to create a file in /etc/zabbix/zabbix_server.conf.d/ and add UserParam
 
 * You should save the script in any directory you want, do it executable from zabbix user using sudo.
 * You have to create a file in /etc/zabbix/zabbix_server.conf.d/ and add UserParameters:
-
+UserParameter=gluster_volume_info[\*],sudo /path/gstatus_discovery.py $1 $2
+UserParameter=gluster_storage_info[\*],sudo /path/gstatus_discovery.py $1
+UserParameter=gluster_volume_info,sudo /path/gstatus_discovery.py
 * The last one shoud be import zabbix_template.xml in zabbix
 
 ### Examples executing script
