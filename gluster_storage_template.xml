@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-01-14T15:36:47Z</date>
+    <date>2018-01-17T12:41:52Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -696,4 +696,38 @@
             <screens/>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{Gluster Storage Template:gluster_storage_info[&quot;nodes_active&quot;].last()} &lt; {Gluster Storage Template:gluster_storage_info[&quot;node_count&quot;].last()}</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Gluster storage nodes is not online</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Gluster Storage Template:gluster_storage_info[&quot;status&quot;].str(healthy)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Gluster volume status is Unhealthy</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
 </zabbix_export>
