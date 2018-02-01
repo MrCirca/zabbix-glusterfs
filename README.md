@@ -37,4 +37,4 @@ Giving two arguments and last should be volume name
 ./gstatus_discovery.py used_capacity gv0
 3235531434
 ```
-
+Zabbix Template was made for Zabbix 3.4.*
