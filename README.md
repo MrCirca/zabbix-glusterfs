@@ -6,7 +6,7 @@ One python script that calls [gstatus](https://github.com/gluster/gstatus), disc
 You have to install gstatus [gstatus](https://github.com/gluster/gstatus)
 
 You should save the script in any directory you want, in order to do it executable from zabbix user using sudo.
-You have to glusterfs.conf file in /etc/zabbix/zabbix_server.conf.d/
+You have to add glusterfs.conf file in /etc/zabbix/zabbix_agennt.conf.d/
 
 * You should save the script in /usr/local/bin directory and do it executable from zabbix user using sudo.
 * The last one shoud be import zabbix_template.xml in zabbix
