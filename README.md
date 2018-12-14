@@ -5,7 +5,14 @@ In this repository there are two files.
 One python script that calls [gstatus](https://github.com/gluster/gstatus), discovering gluster volumes and print data we want, according to the arguments given.
 You have to install gstatus [gstatus](https://github.com/gluster/gstatus)
 
-You should save the script in any directory you want, in order to do it executable from zabbix user using sudo.
+You should save the script in /usr/local/bin/ and do it executable. Use visudo and give privileges to zabbix user.
+```
+visudo
+```
+And paste the following line!
+```
+zabbix ALL=(ALL) NOPASSWD: gstatus_discovery.py
+```
 You have to add glusterfs.conf file in /etc/zabbix/zabbix_agennt.conf.d/
 
 * You should save the script in /usr/local/bin directory and do it executable from zabbix user using sudo.
@@ -33,4 +40,5 @@ Giving two arguments and last should be volume name
 ./gstatus_discovery.py used_capacity gv0
 3235531434
 ```
-Zabbix Template was made for Zabbix 3.4.*
+*Zabbix Template was made for Zabbix 3.4.*
+*Zabbix 4.0 Supported (Tested)*
