@@ -1,5 +1,5 @@
 # Gluster Storage - Zabbix
-
+![Zabbix Glusterfs](https://i.imgur.com/K7OP7uM.png)
 This project was created to monitor Gluster Storage with Zabbix.
 In this repository there are two files.
 One python script that calls [gstatus](https://github.com/gluster/gstatus), discovering gluster volumes and print data we want, according to the arguments given.
@@ -41,6 +41,5 @@ Giving two arguments and last should be volume name
 3235531434
 ```
 *Zabbix Template was made for Zabbix 3.4.*
-
 
 *Zabbix 4.0 Supported (Tested)*
