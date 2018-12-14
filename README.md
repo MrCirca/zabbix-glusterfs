@@ -11,11 +11,11 @@ You should save the script in /usr/local/bin/ and do it executable. Use visudo a
 ```
 visudo
 ```
-And paste the following line!
+Paste the following line!
 ```
 zabbix ALL=(ALL) NOPASSWD: gstatus_discovery.py
 ```
-You have to add glusterfs.conf file in /etc/zabbix/zabbix_agennt.conf.d/
+You have to add glusterfs.conf file in /etc/zabbix/zabbix_agent.conf.d/
 
 * You should save the script in /usr/local/bin directory and do it executable from zabbix user using sudo.
 * The last one shoud be import zabbix_template.xml in zabbix
